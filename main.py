@@ -89,9 +89,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_os.clicked.connect(lambda: self.Pages.setCurrentWidget(self.pg_os))
 
         # Tela de Clientes
-        self.btn_clientes.clicked.connect(
-            lambda: self.Pages.setCurrentWidget(self.pg_cadastro_cliente)
-        )
+        self.btn_clientes.clicked.connect(self.switch_to_cadastro_cliente)
 
         # Tela de contato
         self.btn_contato.clicked.connect(
@@ -400,6 +398,138 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         plt.show()
 
+    # Funcao  cadastro
+    def switch_to_cadastro_cliente(self):
+        self.Pages.setCurrentWidget(self.pg_cadastro_cliente)
+        self.disable_customer_fields()
+
+    # Desabilita campos até que usuario defina funcao
+    def disable_customer_fields(self):
+        self.btn_cadastrar_cliente.setEnabled(False)
+
+        self.txt_nome_cliente.setEnabled(False)
+        self.txt_data_nasc.setEnabled(False)
+        self.txt_responsavel_cliente.setEnabled(False)
+        self.txt_email.setEnabled(False)
+        self.txt_tef1.setEnabled(False)
+        self.txt_tef2.setEnabled(False)
+        self.txt_endereco.setEnabled(False)
+        self.txt_num_end.setEnabled(False)
+        self.txt_cep.setEnabled(False)
+        self.txt_obs.setEnabled(False)
+
+        self.txt_nome_cliente.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_data_nasc.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_responsavel_cliente.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_email.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_tef1.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_tef2.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_endereco.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_num_end.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_cep.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.txt_obs.setStyleSheet(
+            "color:rgba(211,236,251,1);\n"
+            "border-bottom: 1px solid white;\n"
+            "border-radius:None;\n"
+            "background-color:rgba(0,0,0,0.5);\n"
+            "font-family:Trebucher Ms;\n"
+            "font-size: 21px;"
+        )
+
+        self.btn_cadastrar_cliente.setStyleSheet(
+            "QPushButton{\n"
+            "	background-color: rgba(0,0,0,0.5); \n"
+            "	color:black;\n"
+            "	border-radius: 10px;\n"
+            "	font-size: 16px;\n"
+            "}\n"
+        )
+
+        self.txt_nome_cliente.setText("")
+        self.txt_data_nasc.setText("01012000")
+        self.txt_responsavel_cliente.setText("")
+        self.txt_email.setText("")
+        self.txt_endereco.setText("")
+        self.txt_tef1.setText("00000000000")
+        self.txt_tef2.setText("00000000000")
+        self.txt_num_end.setText("")
+        self.txt_cep.setText("")
+        self.txt_obs.setText("")
+
+        # self.txt_rg_cliente.setStyleSheet("") << Retira estilo personalizado
+
     # Funcao cadastra cliente
     def subscribe_clientes(self):
         rg = self.txt_rg_cliente.text()
@@ -443,6 +573,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setWindowTitle("Cadastro cliente")
             msg.setText("Cadastro já existe!")
             msg.exec()
+
+    def question_funcao(self):
+        rg = self.txt_rg_cliente.text()
+        msgBox = QMessageBox()
+
+        if self.btn_clientes.clicked:
+            msgBox.setText("Deseja estornar as notas selecionadas?")
+            msgBox.setInformativeText(
+                "As selecionadas voltarão para o estoque \n clique em 'Yes' para confirmar."
+            )
+            msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+            msgBox.setDetailedText(f"O seguinte RG será cadastrado: {rg}")
 
 
 if __name__ == "__main__":

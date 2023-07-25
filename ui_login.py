@@ -24,7 +24,8 @@ class Ui_Login(object):
             Login.setObjectName(u"Login")
         Login.setWindowModality(Qt.NonModal)
         Login.setEnabled(True)
-        Login.resize(406, 362)
+        Login.resize(400, 400)
+        Login.setMaximumSize(QSize(400, 400))
         Login.setStyleSheet(u"\n"
 "background-color: rgba(0,80,121,0.58);")
         self.frame = QFrame(Login)
