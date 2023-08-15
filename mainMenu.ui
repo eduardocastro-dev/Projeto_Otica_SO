@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>826</width>
-    <height>720</height>
+    <width>696</width>
+    <height>662</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1080</width>
-    <height>720</height>
+    <width>696</width>
+    <height>662</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -329,7 +329,7 @@ color:black
        <string notr="true">background-color: rgb(0,80,121);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pg_tables">
        <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -536,31 +536,6 @@ background-color: rgb(0, 158, 231);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="btn_">
-                     <property name="minimumSize">
-                      <size>
-                       <width>100</width>
-                       <height>25</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton{
-	background-color: #fff; 
-	color:black;
-	border-radius: 10px;
-	font-size: 16px;
-}
-
-QPushButton:hover{
-background-color: rgb(0, 158, 231);
-}</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
                     <spacer name="verticalSpacer">
                      <property name="orientation">
                       <enum>Qt::Vertical</enum>
@@ -732,79 +707,78 @@ background-color: rgb(0, 158, 231);
            <attribute name="title">
             <string>OS COMPLETA</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_52">
+           <layout class="QVBoxLayout" name="verticalLayout_53">
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_51">
-              <property name="spacing">
-               <number>3</number>
-              </property>
+             <layout class="QVBoxLayout" name="verticalLayout_52">
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_44">
+               <layout class="QVBoxLayout" name="verticalLayout_51">
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_43">
+                 <layout class="QVBoxLayout" name="verticalLayout_44">
                   <item>
-                   <widget class="QLabel" name="label_77">
-                    <property name="maximumSize">
-                     <size>
-                      <width>739</width>
-                      <height>19</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-bottom: 1px solid white;</string>
-                    </property>
-                    <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;DADOS DO CLIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_63">
+                   <layout class="QVBoxLayout" name="verticalLayout_43">
                     <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_55">
+                     <widget class="QLabel" name="label_77">
+                      <property name="maximumSize">
+                       <size>
+                        <width>739</width>
+                        <height>19</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border-bottom: 1px solid white;</string>
+                      </property>
+                      <property name="text">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;DADOS DO CLIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_63">
                       <item>
-                       <widget class="QLabel" name="label_74">
-                        <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;RG&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLineEdit" name="txt_rg_cliente_os">
-                        <property name="styleSheet">
-                         <string notr="true">color:rgba(211,236,251,1);
+                       <layout class="QHBoxLayout" name="horizontalLayout_55">
+                        <item>
+                         <widget class="QLabel" name="label_74">
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;CPF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="txt_cpf_cliente_os">
+                          <property name="styleSheet">
+                           <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
 border-radius:None;
 background-color:rgba(85,115,155,0.5);
 font-family:Trebucher Ms;
 font-size: 21px;</string>
-                        </property>
-                        <property name="inputMask">
-                         <string>00.000.000-0</string>
-                        </property>
-                        <property name="text">
-                         <string>00.000.000-0</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>00.000.000-0</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="inputMask">
+                           <string>000.000.000-00</string>
+                          </property>
+                          <property name="text">
+                           <string>000.000.000-00</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>00.000.000-0</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="btn_pesquisar_cliente_os">
-                      <property name="minimumSize">
-                       <size>
-                        <width>100</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton{
+                      <item>
+                       <widget class="QPushButton" name="btn_pesquisar_cliente_os">
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>25</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	background-color: #fff; 
 	color:black;
 	border-radius: 10px;
@@ -814,46 +788,25 @@ font-size: 21px;</string>
 QPushButton:hover{
 background-color: rgb(0, 158, 231);
 }</string>
-                      </property>
-                      <property name="text">
-                       <string>PESQUISAR</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_56">
-                    <item>
-                     <widget class="QLabel" name="label_76">
-                      <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;NOME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="txt_nome_cliente_os">
-                      <property name="styleSheet">
-                       <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_61">
-                      <item>
-                       <widget class="QLabel" name="label_75">
+                        </property>
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;RESPONSAVEL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>PESQUISAR</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_56">
+                      <item>
+                       <widget class="QLabel" name="label_76">
+                        <property name="text">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;CLIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="txt_responsavel_cliente_os">
+                       <widget class="QLineEdit" name="txt_nome_cliente_os">
                         <property name="styleSheet">
                          <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
@@ -864,36 +817,39 @@ font-size: 21px;</string>
                         </property>
                        </widget>
                       </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_61">
+                        <item>
+                         <widget class="QLabel" name="label_75">
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;RESPONSAVEL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="txt_responsavel_cliente_os">
+                          <property name="styleSheet">
+                           <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
                      </layout>
                     </item>
                    </layout>
                   </item>
                  </layout>
                 </item>
-               </layout>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_80">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>3</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 255, 255);</string>
-                </property>
-                <property name="text">
-                 <string>.</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_50">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_48">
+                 <layout class="QHBoxLayout" name="horizontalLayout_41">
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_49">
+                   <layout class="QVBoxLayout" name="verticalLayout_50">
                     <item>
                      <widget class="QLabel" name="label_60">
                       <property name="sizePolicy">
@@ -920,7 +876,7 @@ font-size: 21px;</string>
                      </widget>
                     </item>
                     <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_36">
+                     <layout class="QHBoxLayout" name="horizontalLayout_39">
                       <item>
                        <layout class="QVBoxLayout" name="verticalLayout_47">
                         <item>
@@ -1100,66 +1056,138 @@ font-size: 21px;</string>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QVBoxLayout" name="verticalLayout_48">
+                       <layout class="QVBoxLayout" name="verticalLayout_49">
                         <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_34">
+                         <layout class="QVBoxLayout" name="verticalLayout_41">
                           <item>
-                           <widget class="QLabel" name="label_49">
-                            <property name="text">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;PAGAMENTO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QComboBox" name="cb_pagamento">
-                            <property name="styleSheet">
-                             <string notr="true">color:rgba(211,236,251,1);
+                           <layout class="QHBoxLayout" name="horizontalLayout_36">
+                            <item>
+                             <widget class="QLabel" name="label_55">
+                              <property name="text">
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;ENTRADA R$:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="txt_entrada_rs">
+                              <property name="styleSheet">
+                               <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
 border-radius:None;
 background-color:rgba(85,115,155,0.5);
 font-family:Trebucher Ms;
 font-size: 21px;</string>
-                            </property>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_38">
                             <item>
-                             <property name="text">
-                              <string>Cartão</string>
-                             </property>
+                             <widget class="QLabel" name="label_59">
+                              <property name="text">
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;TIPO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                              </property>
+                             </widget>
                             </item>
                             <item>
-                             <property name="text">
-                              <string>Carne</string>
-                             </property>
+                             <widget class="QComboBox" name="cb_tipo">
+                              <property name="styleSheet">
+                               <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                              </property>
+                              <item>
+                               <property name="text">
+                                <string>Debito</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>PIX</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>Dinheiro</string>
+                               </property>
+                              </item>
+                             </widget>
                             </item>
-                           </widget>
+                           </layout>
                           </item>
                          </layout>
                         </item>
                         <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_42">
+                         <layout class="QVBoxLayout" name="verticalLayout_48">
                           <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_41">
+                           <layout class="QVBoxLayout" name="verticalLayout_42">
                             <item>
-                             <layout class="QHBoxLayout" name="horizontalLayout_39">
+                             <layout class="QHBoxLayout" name="horizontalLayout_34">
                               <item>
-                               <layout class="QHBoxLayout" name="horizontalLayout_38">
+                               <widget class="QLabel" name="label_49">
+                                <property name="text">
+                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;PAGAMENTO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QComboBox" name="cb_pagamento">
+                                <property name="styleSheet">
+                                 <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                                </property>
                                 <item>
-                                 <widget class="QLabel" name="label_55">
+                                 <property name="text">
+                                  <string>Cartão</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>Carne</string>
+                                 </property>
+                                </item>
+                               </widget>
+                              </item>
+                             </layout>
+                            </item>
+                            <item>
+                             <layout class="QHBoxLayout" name="horizontalLayout_31">
+                              <item>
+                               <layout class="QHBoxLayout" name="horizontalLayout_37">
+                                <item>
+                                 <widget class="QLabel" name="label_48">
                                   <property name="text">
-                                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;ENTRADA DE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;A PAGAR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                   </property>
                                  </widget>
                                 </item>
                                 <item>
-                                 <widget class="QLabel" name="label_58">
-                                  <property name="text">
-                                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;R$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                  </property>
-                                 </widget>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_30">
+                                  <item>
+                                   <widget class="QLabel" name="label_52">
+                                    <property name="text">
+                                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;R$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
                                 </item>
                                </layout>
                               </item>
                               <item>
-                               <widget class="QLineEdit" name="txt_entrada_rs">
+                               <widget class="QComboBox" name="cb_a_pagar_os">
                                 <property name="styleSheet">
                                  <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
@@ -1172,105 +1200,170 @@ font-size: 21px;</string>
                               </item>
                              </layout>
                             </item>
-                            <item>
-                             <widget class="QLabel" name="label_59">
-                              <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;TIPO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                              </property>
-                             </widget>
-                            </item>
                            </layout>
                           </item>
                           <item>
-                           <widget class="QComboBox" name="cb_tipo">
-                            <property name="styleSheet">
-                             <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                            </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_40">
                             <item>
-                             <property name="text">
-                              <string>Debito</string>
-                             </property>
-                            </item>
-                            <item>
-                             <property name="text">
-                              <string>PIX</string>
-                             </property>
-                            </item>
-                            <item>
-                             <property name="text">
-                              <string>Dinheiro</string>
-                             </property>
-                            </item>
-                           </widget>
-                          </item>
-                         </layout>
-                        </item>
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_40">
-                          <item>
-                           <widget class="QLabel" name="label_57">
-                            <property name="text">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;VENCIMENTO DE OS DIA: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLineEdit" name="txt_vencimento_os">
-                            <property name="styleSheet">
-                             <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </item>
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_31">
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_37">
-                            <item>
-                             <widget class="QLabel" name="label_48">
+                             <widget class="QLabel" name="label_57">
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;A PAGAR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;VENCIMENTO DIA: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <layout class="QHBoxLayout" name="horizontalLayout_30">
+                             <widget class="QComboBox" name="comboBox">
+                              <property name="styleSheet">
+                               <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                              </property>
                               <item>
-                               <widget class="QLabel" name="label_52">
-                                <property name="text">
-                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;R$&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                </property>
-                                <property name="alignment">
-                                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                                </property>
-                               </widget>
+                               <property name="text">
+                                <string>1</string>
+                               </property>
                               </item>
-                             </layout>
+                              <item>
+                               <property name="text">
+                                <string>2</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>3</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>4</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>5</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>6</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>7</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>8</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>9</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>10</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>11</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>12</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>13</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>14</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>15</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>16</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>17</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>18</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>19</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>20</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>21</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>22</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>23</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>24</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>25</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>26</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>27</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>28</string>
+                               </property>
+                              </item>
+                             </widget>
                             </item>
                            </layout>
-                          </item>
-                          <item>
-                           <widget class="QComboBox" name="cb_a_pagar_os">
-                            <property name="styleSheet">
-                             <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                            </property>
-                           </widget>
                           </item>
                          </layout>
                         </item>
@@ -1279,22 +1372,6 @@ font-size: 21px;</string>
                      </layout>
                     </item>
                    </layout>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_78">
-                    <property name="maximumSize">
-                     <size>
-                      <width>3</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                    <property name="text">
-                     <string>.</string>
-                    </property>
-                   </widget>
                   </item>
                   <item>
                    <layout class="QVBoxLayout" name="verticalLayout_45">
@@ -1415,24 +1492,12 @@ background-color: rgb(0, 158, 231);
                   </item>
                  </layout>
                 </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_39">
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_41">
-                  <item>
-                   <widget class="QLabel" name="label_79">
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>3</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                    <property name="text">
-                     <string>.</string>
-                    </property>
-                   </widget>
-                  </item>
+                 <layout class="QVBoxLayout" name="verticalLayout_37">
                   <item>
                    <widget class="QLabel" name="label_73">
                     <property name="sizePolicy">
@@ -1459,290 +1524,64 @@ background-color: rgb(0, 158, 231);
                    </widget>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_62">
+                   <layout class="QHBoxLayout" name="horizontalLayout_46">
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_37">
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_59">
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_58">
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_53">
-                            <item>
-                             <widget class="QLabel" name="label_64">
-                              <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;OE ESF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="txt_oe_esf">
-                              <property name="styleSheet">
-                               <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </item>
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_54">
-                            <item>
-                             <widget class="QLabel" name="label_67">
-                              <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;CIL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="txt_cil_oe">
-                              <property name="styleSheet">
-                               <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                              </property>
-                              <property name="inputMask">
-                               <string/>
-                              </property>
-                              <property name="text">
-                               <string/>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </item>
-                         </layout>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_52">
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_51">
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_50">
-                            <item>
-                             <layout class="QHBoxLayout" name="horizontalLayout_49">
-                              <item>
-                               <widget class="QLabel" name="label_63">
-                                <property name="text">
-                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;OD ESF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QLineEdit" name="txt_od_esf">
-                                <property name="styleSheet">
-                                 <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </item>
-                            <item>
-                             <widget class="QLabel" name="label_66">
-                              <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;CIL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="txt_cil_od">
-                              <property name="styleSheet">
-                               <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </item>
-                         </layout>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
+                     <widget class="QPushButton" name="btn_anexar_receita">
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	background-color: #fff; 
+	color:black;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+QPushButton:hover{
+background-color: rgb(0, 158, 231);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Anexar Receita</string>
+                      </property>
+                     </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_39">
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_45">
-                        <item>
-                         <widget class="QLabel" name="label_70">
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;DNP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="txt_dnp">
-                          <property name="styleSheet">
-                           <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                          </property>
-                          <property name="inputMask">
-                           <string>00/00</string>
-                          </property>
-                          <property name="text">
-                           <string>00/00</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_46">
-                        <item>
-                         <widget class="QLabel" name="label_71">
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;ALTURA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="txt_altura">
-                          <property name="styleSheet">
-                           <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                          </property>
-                          <property name="inputMask">
-                           <string>00/00</string>
-                          </property>
-                          <property name="text">
-                           <string>00/00</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_47">
-                        <item>
-                         <widget class="QLabel" name="label_72">
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;ADIÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="txt_adicao">
-                          <property name="styleSheet">
-                           <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                          </property>
-                          <property name="inputMask">
-                           <string>0,00/0,00</string>
-                          </property>
-                          <property name="text">
-                           <string>0,00/0,00</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
+                     <widget class="QLineEdit" name="ln_anexo_receita">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Selecione a pasta com o arquivo  --------&gt;</string>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_40">
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_40">
+                   <layout class="QVBoxLayout" name="verticalLayout_38">
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_38">
+                     <layout class="QHBoxLayout" name="horizontalLayout_43">
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_43">
-                        <item>
-                         <widget class="QLabel" name="label_61">
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;COD.ARMAÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="txt_cod_armacao">
-                          <property name="styleSheet">
-                           <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_44">
-                        <item>
-                         <widget class="QLabel" name="label_62">
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;TIPO DE LENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="txt_tipo_lente">
-                          <property name="styleSheet">
-                           <string notr="true">color:rgba(211,236,251,1);
-border-bottom: 1px solid white;
-border-radius:None;
-background-color:rgba(85,115,155,0.5);
-font-family:Trebucher Ms;
-font-size: 21px;</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_60">
-                      <item>
-                       <widget class="QLabel" name="label_65">
+                       <widget class="QLabel" name="label_61">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;EXAMINADOR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;COD.ARMAÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="txt_examinador">
+                       <widget class="QLineEdit" name="txt_cod_armacao">
                         <property name="styleSheet">
                          <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
@@ -1754,6 +1593,52 @@ font-size: 21px;</string>
                        </widget>
                       </item>
                      </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_44">
+                      <item>
+                       <widget class="QLabel" name="label_62">
+                        <property name="text">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;TIPO DE LENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="txt_tipo_lente">
+                        <property name="styleSheet">
+                         <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_60">
+                    <item>
+                     <widget class="QLabel" name="label_65">
+                      <property name="text">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;EXAMINADOR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="txt_examinador">
+                      <property name="styleSheet">
+                       <string notr="true">color:rgba(211,236,251,1);
+border-bottom: 1px solid white;
+border-radius:None;
+background-color:rgba(85,115,155,0.5);
+font-family:Trebucher Ms;
+font-size: 21px;</string>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </item>
@@ -1794,7 +1679,7 @@ font-size: 21px;</string>
                <string notr="true">font: italic 28pt &quot;Caladea&quot;;</string>
               </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; text-decoration: underline; color:#ffffff;&quot;&gt;CLIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; text-decoration: underline; color:#ffffff;&quot;&gt;CLIENTES &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -1841,7 +1726,7 @@ font-size: 21px;</string>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_22">
                 <property name="spacing">
-                 <number>6</number>
+                 <number>4</number>
                 </property>
                 <item>
                  <widget class="QPushButton" name="btn_pesquisar_cliente">
@@ -1923,7 +1808,7 @@ background-color: rgb(0, 158, 231);
 }</string>
                   </property>
                   <property name="text">
-                   <string>CADASTRAR</string>
+                   <string>SALVAR CADASTRO</string>
                   </property>
                  </widget>
                 </item>
@@ -1972,12 +1857,12 @@ background-color: rgb(0, 158, 231);
                           <item>
                            <widget class="QLabel" name="label_32">
                             <property name="text">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;RG&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;CPF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="txt_rg_cliente">
+                           <widget class="QLineEdit" name="txt_cpf_cliente">
                             <property name="styleSheet">
                              <string notr="true">color:rgba(211,236,251,1);
 border-bottom: 1px solid white;
@@ -1987,10 +1872,10 @@ font-family:Trebucher Ms;
 font-size: 21px;</string>
                             </property>
                             <property name="inputMask">
-                             <string>00.000.000-0</string>
+                             <string>000.000.000-00</string>
                             </property>
                             <property name="text">
-                             <string>00.000.000-0</string>
+                             <string>000.000.000-00</string>
                             </property>
                             <property name="placeholderText">
                              <string>00.000.000-0</string>
@@ -2425,12 +2310,12 @@ font-size: 21px;</string>
                       </column>
                       <column>
                        <property name="text">
-                        <string>Venciemento</string>
+                        <string>Vencimento</string>
                        </property>
                       </column>
                       <column>
                        <property name="text">
-                        <string>Responsavel</string>
+                        <string>Usuario</string>
                        </property>
                       </column>
                       <column>
@@ -2500,7 +2385,7 @@ background-color: rgb(0, 158, 231);
                     </column>
                     <column>
                      <property name="text">
-                      <string>Responsavel</string>
+                      <string>Usuario</string>
                      </property>
                     </column>
                    </widget>

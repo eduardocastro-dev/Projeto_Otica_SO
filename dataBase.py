@@ -8,12 +8,14 @@ class DataBase:
     def conecta(self):
         self.connection = sqlite3.connect(self.name)
 
+    # Fecha conexão com o banco
     def close_connection(self):
         try:
             self.connection.close()
         except AttributeError:
             pass
 
+    # Cria tabalea usuarios
     def create_table_user(self):
         try:
             cursor = self.connection.cursor()
@@ -31,6 +33,7 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão")
 
+    # Inseri dados Usario
     def insert_user(self, name, user, passaword, access):
         try:
             cursor = self.connection.cursor()
@@ -45,6 +48,7 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão")
 
+    # Verifica o usuario
     def check_user(self, user, passaword):
         try:
             cursor = self.connection.cursor()
@@ -78,6 +82,7 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão")
 
+    # Inseri dados NFCE
     def insert_data(self, full_dataset):
         cursor = self.connection.cursor()
         campos_tabela = (
@@ -110,6 +115,7 @@ class DataBase:
         except sqlite3.IntegrityError:
             print("Nota já existe no banco")
 
+    # Cria tabela NFCE
     def create_table_nfe(self):
         cursor = self.connection.cursor()
 
@@ -144,6 +150,7 @@ class DataBase:
         """
         )
 
+    # Atualzia estoque
     def update_estoque(self, data_saida, usuario, notas):
         try:
             cursor = self.connection.cursor()
@@ -155,6 +162,7 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão para alterar os campos")
 
+    # Atualzia estorno
     def update_estorno(self, notas):
         try:
             cursor = self.connection.cursor()
@@ -164,6 +172,7 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão para alterar os campos")
 
+    # Cria a tabela cliente
     def crate_table_cliente(self):
         try:
             cursor = self.connection.cursor()
@@ -171,7 +180,7 @@ class DataBase:
                 """
                     CREATE TABLE IF NOT EXISTS clientes (
                         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                        rg TEXT UNIQUE NOT NULL,
+                        cpf TEXT UNIQUE NOT NULL,
                         nome TEXT NOT NULL,
                         data_nasc TEXT NOT NULL,
                         responsavel TEXT,
@@ -181,59 +190,21 @@ class DataBase:
                         endereco TEXT NOT NULL,
                         num INTEGER NOT NULL,
                         cep INTEGER NOT NULL,
-                        observacao TEXT
+                        observacao TEXT,
+                        usuario TEXT NOT NULL
                     );
                     """
             )
         except AttributeError:
             print("Faça a conexão")
 
-    def insert_cliente(
-        self,
-        rg,
-        nome,
-        data_nasc,
-        responsavel,
-        email,
-        telefone,
-        telefone2,
-        endereco,
-        numero,
-        cep,
-        observacao,
-    ):
-        try:
-            cursor = self.connection.cursor()
-            cursor.execute(
-                """
-                    INSERT INTO clientes (rg, nome, data_nasc, responsavel, email, telefone, telefone2, endereco, num, cep, observacao)
-                    VALUES(?,?,?,?,?,?,?,?,?,?,?)
-            """,
-                (
-                    rg,
-                    nome,
-                    data_nasc,
-                    responsavel,
-                    email,
-                    telefone,
-                    telefone2,
-                    endereco,
-                    numero,
-                    cep,
-                    observacao,
-                ),
-            )
-            self.connection.commit()
-
-        except AttributeError:
-            print("Faça a conexão")
-
-    def check_client_rg(self, rg):
+    # Verifica CPF cliente
+    def check_client_cpf(self, cpf):
         try:
             cursor = self.connection.cursor()
 
             # Executar consulta SQL para verificar se o RG já existe
-            cursor.execute("SELECT COUNT(*) FROM clientes WHERE rg = ?", (rg,))
+            cursor.execute("SELECT COUNT(*) FROM clientes WHERE cpf = ?", (cpf,))
             resultado = cursor.fetchone()[0]
 
             # Verificar se o RG existe ou não
@@ -245,6 +216,139 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão")
 
+    # Insere/altera dados do cliente
+    def insert_cliente(
+        self,
+        cpf,
+        nome,
+        data_nasc,
+        responsavel,
+        email,
+        telefone,
+        telefone2,
+        endereco,
+        numero,
+        cep,
+        observacao,
+        usuario,
+    ):
+        try:
+            cursor = self.connection.cursor()
+            if self.check_client_cpf(cpf) is True:
+                cursor.execute(
+                    """
+                    UPDATE clientes
+                    SET nome = ?,
+                        data_nasc = ?,
+                        responsavel = ?,
+                        email = ?,
+                        telefone = ?,
+                        telefone2 = ?,
+                        endereco = ?,
+                        num = ?,
+                        cep = ?,
+                        observacao = ?
+                        usuario = ?
+                    WHERE cpf = ?
+                    """,
+                    (
+                        nome,
+                        data_nasc,
+                        responsavel,
+                        email,
+                        telefone,
+                        telefone2,
+                        endereco,
+                        numero,
+                        cep,
+                        observacao,
+                        cpf,
+                        usuario,
+                    ),
+                )
+            else:
+                cursor.execute(
+                    """
+                    INSERT INTO clientes (cpf, nome, data_nasc, responsavel, email, telefone, telefone2, endereco, num, cep, observacao, usuario)
+                    VALUES(?,?,?,?,?,?,?,?,?,?,?,?)
+                    """,
+                    (
+                        cpf,
+                        nome,
+                        data_nasc,
+                        responsavel,
+                        email,
+                        telefone,
+                        telefone2,
+                        endereco,
+                        numero,
+                        cep,
+                        observacao,
+                        usuario,
+                    ),
+                )
+            self.connection.commit()
+
+        except AttributeError:
+            print("Faça a conexão")
+
+    # Set informações de usuario caso exista
+    def get_customer_info(self, cpf):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT * FROM clientes WHERE cpf = ?", (cpf,))
+            result = cursor.fetchone()
+
+            if result:
+                customer_info = {
+                    "nome": result[2],
+                    "data_nasc": result[3],  # Supondo que seja uma data
+                    "responsavel": result[4],
+                    "email": result[5],
+                    "telefone1": result[6],
+                    "telefone2": result[7],
+                    "endereco": result[8],
+                    "numero": result[9],
+                    "cep": result[10],
+                    "observacoes": result[11],
+                }
+                return customer_info
+            else:
+                return None
+
+        except AttributeError:
+            print("Faça a conexão")
+
+    def create_table_os(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(
+                """
+            CREATE TABLE IF NOT EXISTS os (
+                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                os INTEGER NOT NULL,
+                cpf TEXT NOT NULL,
+                nome_cliente TEXT NOT NULL,
+                responsavel TEXT,
+                armacao_valor INTEGER,
+                lentes_valor INTEGER,
+                outros INTEGER,
+                desconto INTEGER,
+                total INTEGER NOT NULL,
+                pagamento TEXT NOT NULL,
+                entrada INTEGER NOT NULL,
+                tipo_entrada TEXT NOT NULL,
+                valor_receber INTENGER NOT NULL,
+                vencimento INTEGER NOT NULL,
+                anexo_receita BLOB,
+                usuario TEXT NOT NULL,
+                FOREIGN KEY (cpf) REFERENCES clientes (cpf)
+             );
+            """
+            )
+        except AttributeError:
+            print("Faça a conexão")
+
 
 if __name__ == "__main__":
     db = DataBase()
@@ -252,4 +356,5 @@ if __name__ == "__main__":
     db.create_table_user()
     db.create_table_nfe()
     db.crate_table_cliente()
+    db.create_table_os()
     db.close_connection()
