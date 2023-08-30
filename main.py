@@ -19,6 +19,8 @@ import pandas as pd
 import re
 import matplotlib.pyplot as plt
 
+import os
+
 
 class Login(QWidget, Ui_Login):
     def __init__(self) -> None:
@@ -142,6 +144,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_exel.clicked.connect(self.exel_file_estoque)
         # Btn Grafico_estoque
         self.btn_grafico.clicked.connect(self.grafico_estoque)
+
+        # ---- Anexo OS
+        # Btn localizar arquivo anexo
+        self.btn_anexar_receita.clicked.connect(self.open_path_os)
 
     # Função_cadastrar_usuario
     def subscribe_user(self):
@@ -796,6 +802,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         db.close_connection()
 
+    # Funcao Edita dados cliente 
     def edit_record(self):
         self.enable_customer_fields()
         self.btn_editar_cliente.setStyleSheet(
@@ -834,6 +841,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             "font-size: 21px;"
         )
 
+    def open_path_os(self):
+        file, _ = QFileDialog.getOpenFileName(
+            self,
+            "Open File",
+            "/home",
+            "Arquivos de Texto (*.*)" 
+        )
+        if file:
+            path = os.path.dirname(file)
+            self.ln_anexo_receita.setText(path)  
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
