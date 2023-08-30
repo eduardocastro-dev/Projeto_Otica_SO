@@ -329,7 +329,7 @@ color:black
        <string notr="true">background-color: rgb(0,80,121);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="pg_tables">
        <layout class="QVBoxLayout" name="verticalLayout_9">
