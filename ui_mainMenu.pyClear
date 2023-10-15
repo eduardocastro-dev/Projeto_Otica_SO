@@ -380,12 +380,12 @@ class Ui_MainWindow(object):
         self.tabWidget_2.setObjectName(u"tabWidget_2")
         self.tab_5 = QWidget()
         self.tab_5.setObjectName(u"tab_5")
-        self.verticalLayout_54 = QVBoxLayout(self.tab_5)
-        self.verticalLayout_54.setObjectName(u"verticalLayout_54")
-        self.verticalLayout_53 = QVBoxLayout()
+        self.verticalLayout_53 = QVBoxLayout(self.tab_5)
         self.verticalLayout_53.setObjectName(u"verticalLayout_53")
         self.verticalLayout_52 = QVBoxLayout()
         self.verticalLayout_52.setObjectName(u"verticalLayout_52")
+        self.verticalLayout_51 = QVBoxLayout()
+        self.verticalLayout_51.setObjectName(u"verticalLayout_51")
         self.verticalLayout_44 = QVBoxLayout()
         self.verticalLayout_44.setObjectName(u"verticalLayout_44")
         self.verticalLayout_43 = QVBoxLayout()
@@ -407,16 +407,16 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_55.addWidget(self.label_75)
 
-        self.txt_os_num = QLineEdit(self.tab_5)
-        self.txt_os_num.setObjectName(u"txt_os_num")
-        self.txt_os_num.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+        self.txt_nome_cliente_os = QLineEdit(self.tab_5)
+        self.txt_nome_cliente_os.setObjectName(u"txt_nome_cliente_os")
+        self.txt_nome_cliente_os.setStyleSheet(u"color:rgba(211,236,251,1);\n"
 "border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(85,115,155,0.5);\n"
 "font-family:Trebucher Ms;\n"
 "font-size: 21px;")
 
-        self.horizontalLayout_55.addWidget(self.txt_os_num)
+        self.horizontalLayout_55.addWidget(self.txt_nome_cliente_os)
 
 
         self.horizontalLayout_63.addLayout(self.horizontalLayout_55)
@@ -426,11 +426,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_56 = QHBoxLayout()
         self.horizontalLayout_56.setObjectName(u"horizontalLayout_56")
-        self.label_76 = QLabel(self.tab_5)
-        self.label_76.setObjectName(u"label_76")
-
-        self.horizontalLayout_56.addWidget(self.label_76)
-
         self.label_74 = QLabel(self.tab_5)
         self.label_74.setObjectName(u"label_74")
 
@@ -463,24 +458,23 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_56.addWidget(self.btn_pesquisar_cliente_os)
 
-        self.label_16 = QLabel(self.tab_5)
-        self.label_16.setObjectName(u"label_16")
+        self.label_76 = QLabel(self.tab_5)
+        self.label_76.setObjectName(u"label_76")
 
-        self.horizontalLayout_56.addWidget(self.label_16)
+        self.horizontalLayout_56.addWidget(self.label_76)
 
         self.horizontalLayout_61 = QHBoxLayout()
         self.horizontalLayout_61.setObjectName(u"horizontalLayout_61")
-        self.txt_cliente_os = QLineEdit(self.tab_5)
-        self.txt_cliente_os.setObjectName(u"txt_cliente_os")
-        self.txt_cliente_os.setEnabled(False)
-        self.txt_cliente_os.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+        self.txt_responsavel_cliente_os = QLineEdit(self.tab_5)
+        self.txt_responsavel_cliente_os.setObjectName(u"txt_responsavel_cliente_os")
+        self.txt_responsavel_cliente_os.setStyleSheet(u"color:rgba(211,236,251,1);\n"
 "border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(0,0,0,0.5);\n"
 "font-family:Trebucher Ms;\n"
 "font-size: 21px;")
 
-        self.horizontalLayout_61.addWidget(self.txt_cliente_os)
+        self.horizontalLayout_61.addWidget(self.txt_responsavel_cliente_os)
 
 
         self.horizontalLayout_56.addLayout(self.horizontalLayout_61)
@@ -492,10 +486,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_44.addLayout(self.verticalLayout_43)
 
 
-        self.verticalLayout_52.addLayout(self.verticalLayout_44)
+        self.verticalLayout_51.addLayout(self.verticalLayout_44)
 
-        self.verticalLayout_45 = QVBoxLayout()
-        self.verticalLayout_45.setObjectName(u"verticalLayout_45")
+        self.horizontalLayout_41 = QHBoxLayout()
+        self.horizontalLayout_41.setObjectName(u"horizontalLayout_41")
+        self.verticalLayout_50 = QVBoxLayout()
+        self.verticalLayout_50.setObjectName(u"verticalLayout_50")
         self.label_60 = QLabel(self.tab_5)
         self.label_60.setObjectName(u"label_60")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -507,18 +503,18 @@ class Ui_MainWindow(object):
         self.label_60.setStyleSheet(u"border-bottom: 1px solid white;")
         self.label_60.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_45.addWidget(self.label_60)
+        self.verticalLayout_50.addWidget(self.label_60)
 
-        self.horizontalLayout_48 = QHBoxLayout()
-        self.horizontalLayout_48.setObjectName(u"horizontalLayout_48")
-        self.horizontalLayout_47 = QHBoxLayout()
-        self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
+        self.horizontalLayout_39 = QHBoxLayout()
+        self.horizontalLayout_39.setObjectName(u"horizontalLayout_39")
         self.verticalLayout_47 = QVBoxLayout()
         self.verticalLayout_47.setObjectName(u"verticalLayout_47")
         self.verticalLayout_46 = QVBoxLayout()
         self.verticalLayout_46.setObjectName(u"verticalLayout_46")
         self.verticalLayout_36 = QVBoxLayout()
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
+        self.verticalLayout_35 = QVBoxLayout()
+        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
         self.horizontalLayout_32 = QHBoxLayout()
         self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
         self.label_43 = QLabel(self.tab_5)
@@ -548,10 +544,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_32.addLayout(self.horizontalLayout_25)
 
 
-        self.verticalLayout_36.addLayout(self.horizontalLayout_32)
+        self.verticalLayout_35.addLayout(self.horizontalLayout_32)
 
-        self.verticalLayout_35 = QVBoxLayout()
-        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
         self.horizontalLayout_33 = QHBoxLayout()
         self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
         self.label_44 = QLabel(self.tab_5)
@@ -646,24 +640,28 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_35 = QHBoxLayout()
         self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
+        self.label_46 = QLabel(self.tab_5)
+        self.label_46.setObjectName(u"label_46")
+
+        self.horizontalLayout_35.addWidget(self.label_46)
+
         self.horizontalLayout_28 = QHBoxLayout()
         self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
-        self.label_55 = QLabel(self.tab_5)
-        self.label_55.setObjectName(u"label_55")
+        self.label_56 = QLabel(self.tab_5)
+        self.label_56.setObjectName(u"label_56")
 
-        self.horizontalLayout_28.addWidget(self.label_55)
+        self.horizontalLayout_28.addWidget(self.label_56)
 
-        self.txt_entrada_rs = QLineEdit(self.tab_5)
-        self.txt_entrada_rs.setObjectName(u"txt_entrada_rs")
-        self.txt_entrada_rs.setEnabled(True)
-        self.txt_entrada_rs.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+        self.txt_total_rs = QLineEdit(self.tab_5)
+        self.txt_total_rs.setObjectName(u"txt_total_rs")
+        self.txt_total_rs.setStyleSheet(u"color:rgba(211,236,251,1);\n"
 "border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
-"background-color:rgba(85,115,155,0.5);\n"
+"background-color:rgba(0,0,0,0.5);\n"
 "font-family:Trebucher Ms;\n"
 "font-size: 21px;")
 
-        self.horizontalLayout_28.addWidget(self.txt_entrada_rs)
+        self.horizontalLayout_28.addWidget(self.txt_total_rs)
 
 
         self.horizontalLayout_35.addLayout(self.horizontalLayout_28)
@@ -672,13 +670,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_47.addLayout(self.horizontalLayout_35)
 
 
-        self.horizontalLayout_47.addLayout(self.verticalLayout_47)
-
-        self.verticalLayout_42 = QVBoxLayout()
-        self.verticalLayout_42.setObjectName(u"verticalLayout_42")
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_42.addItem(self.verticalSpacer_3)
+        self.horizontalLayout_39.addLayout(self.verticalLayout_47)
 
         self.btn_prosseguir_os = QPushButton(self.tab_5)
         self.btn_prosseguir_os.setObjectName(u"btn_prosseguir_os")
@@ -694,50 +686,34 @@ class Ui_MainWindow(object):
 "background-color: rgb(0, 158, 231);\n"
 "}")
 
-        self.verticalLayout_42.addWidget(self.btn_prosseguir_os)
+        self.horizontalLayout_39.addWidget(self.btn_prosseguir_os)
 
-        self.label_46 = QLabel(self.tab_5)
-        self.label_46.setObjectName(u"label_46")
-
-        self.verticalLayout_42.addWidget(self.label_46)
-
-        self.txt_total_rs = QLineEdit(self.tab_5)
-        self.txt_total_rs.setObjectName(u"txt_total_rs")
-        self.txt_total_rs.setEnabled(True)
-        self.txt_total_rs.setStyleSheet(u"color:rgba(211,236,251,1);\n"
-"border-bottom: 1px solid white;\n"
-"border-radius:None;\n"
-"background-color:rgba(0,0,0,0.5);\n"
-"font-family:Trebucher Ms;\n"
-"font-size: 21px;")
-
-        self.verticalLayout_42.addWidget(self.txt_total_rs)
-
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_42.addItem(self.verticalSpacer_2)
-
-
-        self.horizontalLayout_47.addLayout(self.verticalLayout_42)
-
-
-        self.horizontalLayout_48.addLayout(self.horizontalLayout_47)
-
-        self.horizontalLayout_36 = QHBoxLayout()
-        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
-        self.label_56 = QLabel(self.tab_5)
-        self.label_56.setObjectName(u"label_56")
-        self.label_56.setStyleSheet(u"color:rgba(211,236,251,0);\n"
-"border-bottom: 1px solid white;\n"
-"border-radius:None;\n"
-"background-color:rgba(85,115,155,1);\n"
-"font-family:Trebucher Ms;\n"
-"font-size: 21px;")
-
-        self.horizontalLayout_36.addWidget(self.label_56)
-
+        self.verticalLayout_49 = QVBoxLayout()
+        self.verticalLayout_49.setObjectName(u"verticalLayout_49")
         self.verticalLayout_41 = QVBoxLayout()
         self.verticalLayout_41.setObjectName(u"verticalLayout_41")
+        self.horizontalLayout_36 = QHBoxLayout()
+        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
+        self.label_55 = QLabel(self.tab_5)
+        self.label_55.setObjectName(u"label_55")
+
+        self.horizontalLayout_36.addWidget(self.label_55)
+
+        self.txt_entrada_rs = QLineEdit(self.tab_5)
+        self.txt_entrada_rs.setObjectName(u"txt_entrada_rs")
+        self.txt_entrada_rs.setEnabled(True)
+        self.txt_entrada_rs.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+"border-bottom: 1px solid white;\n"
+"border-radius:None;\n"
+"background-color:rgba(85,115,155,0.5);\n"
+"font-family:Trebucher Ms;\n"
+"font-size: 21px;")
+
+        self.horizontalLayout_36.addWidget(self.txt_entrada_rs)
+
+
+        self.verticalLayout_41.addLayout(self.horizontalLayout_36)
+
         self.horizontalLayout_38 = QHBoxLayout()
         self.horizontalLayout_38.setObjectName(u"horizontalLayout_38")
         self.label_59 = QLabel(self.tab_5)
@@ -751,7 +727,7 @@ class Ui_MainWindow(object):
         self.cb_tipo.addItem("")
         self.cb_tipo.setObjectName(u"cb_tipo")
         self.cb_tipo.setStyleSheet(u"color:rgba(211,236,251,1);\n"
-"\n"
+"border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(85,115,155,0.5);\n"
 "font-family:Trebucher Ms;\n"
@@ -762,40 +738,63 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_41.addLayout(self.horizontalLayout_38)
 
-        self.horizontalLayout_30 = QHBoxLayout()
-        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+
+        self.verticalLayout_49.addLayout(self.verticalLayout_41)
+
+        self.verticalLayout_48 = QVBoxLayout()
+        self.verticalLayout_48.setObjectName(u"verticalLayout_48")
+        self.verticalLayout_42 = QVBoxLayout()
+        self.verticalLayout_42.setObjectName(u"verticalLayout_42")
+        self.horizontalLayout_34 = QHBoxLayout()
+        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
         self.label_49 = QLabel(self.tab_5)
         self.label_49.setObjectName(u"label_49")
 
-        self.horizontalLayout_30.addWidget(self.label_49)
+        self.horizontalLayout_34.addWidget(self.label_49)
 
         self.cb_pagamento = QComboBox(self.tab_5)
         self.cb_pagamento.addItem("")
         self.cb_pagamento.addItem("")
         self.cb_pagamento.setObjectName(u"cb_pagamento")
         self.cb_pagamento.setStyleSheet(u"color:rgba(211,236,251,1);\n"
-"\n"
+"border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(85,115,155,0.5);\n"
 "font-family:Trebucher Ms;\n"
 "font-size: 21px;")
 
-        self.horizontalLayout_30.addWidget(self.cb_pagamento)
+        self.horizontalLayout_34.addWidget(self.cb_pagamento)
 
 
-        self.verticalLayout_41.addLayout(self.horizontalLayout_30)
+        self.verticalLayout_42.addLayout(self.horizontalLayout_34)
 
         self.horizontalLayout_31 = QHBoxLayout()
         self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
+        self.horizontalLayout_37 = QHBoxLayout()
+        self.horizontalLayout_37.setObjectName(u"horizontalLayout_37")
         self.label_48 = QLabel(self.tab_5)
         self.label_48.setObjectName(u"label_48")
 
-        self.horizontalLayout_31.addWidget(self.label_48)
+        self.horizontalLayout_37.addWidget(self.label_48)
+
+        self.horizontalLayout_30 = QHBoxLayout()
+        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.label_52 = QLabel(self.tab_5)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_30.addWidget(self.label_52)
+
+
+        self.horizontalLayout_37.addLayout(self.horizontalLayout_30)
+
+
+        self.horizontalLayout_31.addLayout(self.horizontalLayout_37)
 
         self.cb_a_pagar_os = QComboBox(self.tab_5)
         self.cb_a_pagar_os.setObjectName(u"cb_a_pagar_os")
-        self.cb_a_pagar_os.setMinimumSize(QSize(175, 20))
         self.cb_a_pagar_os.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+"border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(85,115,155,0.5);\n"
 "font-family:Trebucher Ms;\n"
@@ -804,46 +803,50 @@ class Ui_MainWindow(object):
         self.horizontalLayout_31.addWidget(self.cb_a_pagar_os)
 
 
-        self.verticalLayout_41.addLayout(self.horizontalLayout_31)
+        self.verticalLayout_42.addLayout(self.horizontalLayout_31)
 
-        self.horizontalLayout_34 = QHBoxLayout()
-        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
+
+        self.verticalLayout_48.addLayout(self.verticalLayout_42)
+
+        self.horizontalLayout_40 = QHBoxLayout()
+        self.horizontalLayout_40.setObjectName(u"horizontalLayout_40")
         self.label_57 = QLabel(self.tab_5)
         self.label_57.setObjectName(u"label_57")
 
-        self.horizontalLayout_34.addWidget(self.label_57)
+        self.horizontalLayout_40.addWidget(self.label_57)
 
-        self.txt_vencimentodia = QLineEdit(self.tab_5)
-        self.txt_vencimentodia.setObjectName(u"txt_vencimentodia")
-        self.txt_vencimentodia.setStyleSheet(u"color:rgba(211,236,251,1);\n"
+        self.txt_diaVenc_rs = QLineEdit(self.tab_5)
+        self.txt_diaVenc_rs.setObjectName(u"txt_diaVenc_rs")
+        self.txt_diaVenc_rs.setStyleSheet(u"color:rgba(211,236,251,1);\n"
 "border-bottom: 1px solid white;\n"
 "border-radius:None;\n"
 "background-color:rgba(85,115,155,0.5);\n"
 "font-family:Trebucher Ms;\n"
 "font-size: 21px;")
 
-        self.horizontalLayout_34.addWidget(self.txt_vencimentodia)
+        self.horizontalLayout_40.addWidget(self.txt_diaVenc_rs)
 
 
-        self.verticalLayout_41.addLayout(self.horizontalLayout_34)
+        self.verticalLayout_48.addLayout(self.horizontalLayout_40)
 
 
-        self.horizontalLayout_36.addLayout(self.verticalLayout_41)
+        self.verticalLayout_49.addLayout(self.verticalLayout_48)
 
 
-        self.horizontalLayout_48.addLayout(self.horizontalLayout_36)
+        self.horizontalLayout_39.addLayout(self.verticalLayout_49)
 
 
-        self.verticalLayout_45.addLayout(self.horizontalLayout_48)
+        self.verticalLayout_50.addLayout(self.horizontalLayout_39)
 
 
-        self.verticalLayout_52.addLayout(self.verticalLayout_45)
+        self.horizontalLayout_41.addLayout(self.verticalLayout_50)
 
 
-        self.verticalLayout_53.addLayout(self.verticalLayout_52)
+        self.verticalLayout_51.addLayout(self.horizontalLayout_41)
 
-        self.verticalLayout_51 = QVBoxLayout()
-        self.verticalLayout_51.setObjectName(u"verticalLayout_51")
+
+        self.verticalLayout_52.addLayout(self.verticalLayout_51)
+
         self.verticalLayout_39 = QVBoxLayout()
         self.verticalLayout_39.setObjectName(u"verticalLayout_39")
         self.verticalLayout_37 = QVBoxLayout()
@@ -863,6 +866,29 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_46 = QHBoxLayout()
         self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
+        self.btn_anexar_receita = QPushButton(self.tab_5)
+        self.btn_anexar_receita.setObjectName(u"btn_anexar_receita")
+        self.btn_anexar_receita.setMinimumSize(QSize(120, 30))
+        self.btn_anexar_receita.setStyleSheet(u"QPushButton{\n"
+"	background-color: #fff; \n"
+"	color:black;\n"
+"	border-radius: 10px;\n"
+"	font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(0, 158, 231);\n"
+"}")
+
+        self.horizontalLayout_46.addWidget(self.btn_anexar_receita)
+
+        self.ln_anexo_receita = QLineEdit(self.tab_5)
+        self.ln_anexo_receita.setObjectName(u"ln_anexo_receita")
+        self.ln_anexo_receita.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.ln_anexo_receita.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_46.addWidget(self.ln_anexo_receita)
+
 
         self.verticalLayout_37.addLayout(self.horizontalLayout_46)
 
@@ -943,7 +969,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_39.addLayout(self.verticalLayout_40)
 
 
-        self.verticalLayout_51.addLayout(self.verticalLayout_39)
+        self.verticalLayout_52.addLayout(self.verticalLayout_39)
+
+
+        self.verticalLayout_53.addLayout(self.verticalLayout_52)
 
         self.btn_concluirOs = QPushButton(self.tab_5)
         self.btn_concluirOs.setObjectName(u"btn_concluirOs")
@@ -959,20 +988,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(0, 158, 231);\n"
 "}")
 
-        self.verticalLayout_51.addWidget(self.btn_concluirOs)
-
-        self.ln_anexo_receita = QLineEdit(self.tab_5)
-        self.ln_anexo_receita.setObjectName(u"ln_anexo_receita")
-        self.ln_anexo_receita.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.ln_anexo_receita.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_51.addWidget(self.ln_anexo_receita)
-
-
-        self.verticalLayout_53.addLayout(self.verticalLayout_51)
-
-
-        self.verticalLayout_54.addLayout(self.verticalLayout_53)
+        self.verticalLayout_53.addWidget(self.btn_concluirOs)
 
         self.tabWidget_2.addTab(self.tab_5, "")
         self.tab_7 = QWidget()
@@ -2001,13 +2017,12 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Estoque", None))
         self.label_77.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">DADOS DO CLIENTE</span></p></body></html>", None))
         self.label_75.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">N\u00daMERO DA OS</span></p></body></html>", None))
-        self.label_76.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">CLIENTE</span></p></body></html>", None))
         self.label_74.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">CPF</span></p></body></html>", None))
         self.txt_cpf_cliente_os.setInputMask(QCoreApplication.translate("MainWindow", u"000.000.000-00", None))
         self.txt_cpf_cliente_os.setText(QCoreApplication.translate("MainWindow", u"000.000.000-00", None))
         self.txt_cpf_cliente_os.setPlaceholderText(QCoreApplication.translate("MainWindow", u"00.000.000-0", None))
         self.btn_pesquisar_cliente_os.setText(QCoreApplication.translate("MainWindow", u"PESQUISAR", None))
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">CLIENTE</span></p></body></html>", None))
+        self.label_76.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">CLIENTE</span></p></body></html>", None))
         self.label_60.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">DADOS DO PAGAMENTO</span></p></body></html>", None))
         self.label_43.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">ARMA\u00c7\u00c3O</span></p></body></html>", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">R$</span></p></body></html>", None))
@@ -2017,12 +2032,12 @@ class Ui_MainWindow(object):
         self.label_53.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">R$</span></p></body></html>", None))
         self.label_47.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">DESCONTO</span></p></body></html>", None))
         self.label_54.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">R$</span></p></body></html>", None))
-        self.label_55.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">ENTRADA R$:</span></p></body></html>", None))
-        self.btn_prosseguir_os.setText(QCoreApplication.translate("MainWindow", u"Prosseguir", None))
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">TOTAL R$</span></p></body></html>", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">TOTAL</span></p></body></html>", None))
+        self.label_56.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">R$</span></p></body></html>", None))
         self.txt_total_rs.setText("")
-        self.label_56.setText("")
-        self.label_59.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">TIPO DE ENTRADA</span></p></body></html>", None))
+        self.btn_prosseguir_os.setText(QCoreApplication.translate("MainWindow", u"Prosseguir", None))
+        self.label_55.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">ENTRADA R$:</span></p></body></html>", None))
+        self.label_59.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">TIPO DE PAGAMENTO</span></p></body></html>", None))
         self.cb_tipo.setItemText(0, QCoreApplication.translate("MainWindow", u"Debito", None))
         self.cb_tipo.setItemText(1, QCoreApplication.translate("MainWindow", u"PIX", None))
         self.cb_tipo.setItemText(2, QCoreApplication.translate("MainWindow", u"Dinheiro", None))
@@ -2031,14 +2046,16 @@ class Ui_MainWindow(object):
         self.cb_pagamento.setItemText(0, QCoreApplication.translate("MainWindow", u"Cart\u00e3o", None))
         self.cb_pagamento.setItemText(1, QCoreApplication.translate("MainWindow", u"Carne", None))
 
-        self.label_48.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">A PAGAR R$</span></p></body></html>", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">A PAGAR</span></p></body></html>", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">R$</span></p></body></html>", None))
         self.label_57.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">VENCIMENTO DIA: </span></p></body></html>", None))
         self.label_73.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">DADOS ARMA\u00c7\u00c3O / LENTE</span></p></body></html>", None))
+        self.btn_anexar_receita.setText(QCoreApplication.translate("MainWindow", u"Anexar Receita", None))
+        self.ln_anexo_receita.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Selecione a pasta com o arquivo  -------->", None))
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">COD.ARMA\u00c7\u00c3O</span></p></body></html>", None))
         self.label_62.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">TIPO DE LENTE</span></p></body></html>", None))
         self.label_65.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">EXAMINADOR</span></p></body></html>", None))
         self.btn_concluirOs.setText(QCoreApplication.translate("MainWindow", u"CONCLUIR REGISTRO DE OS", None))
-        self.ln_anexo_receita.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Selecione a pasta com o arquivo  -------->", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), QCoreApplication.translate("MainWindow", u"OS COMPLETA", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_7), QCoreApplication.translate("MainWindow", u"Page", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), QCoreApplication.translate("MainWindow", u"Tab 2", None))

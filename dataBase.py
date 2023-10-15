@@ -319,35 +319,77 @@ class DataBase:
         except AttributeError:
             print("Faça a conexão")
 
+    # Cria tabela OS
     def create_table_os(self):
         try:
             cursor = self.connection.cursor()
             cursor.execute(
                 """
-            CREATE TABLE IF NOT EXISTS os (
-                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                os INTEGER NOT NULL,
-                cpf TEXT NOT NULL,
-                nome_cliente TEXT NOT NULL,
-                responsavel TEXT,
-                armacao_valor INTEGER,
-                lentes_valor INTEGER,
-                outros INTEGER,
-                desconto INTEGER,
-                total INTEGER NOT NULL,
-                pagamento TEXT NOT NULL,
-                entrada INTEGER NOT NULL,
-                tipo_entrada TEXT NOT NULL,
-                valor_receber INTENGER NOT NULL,
-                vencimento INTEGER NOT NULL,
-                anexo_receita BLOB,
-                usuario TEXT NOT NULL,
-                FOREIGN KEY (cpf) REFERENCES clientes (cpf)
-             );
-            """
+                CREATE TABLE IF NOT EXISTS os (
+                    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    parcelas_os TEXT NOT NULL,
+                    os INTEGER NOT NULL,
+                    cpf TEXT NOT NULL,
+                    nome_cliente TEXT NOT NULL,
+                    armacao_valor INTEGER,
+                    lentes_valor INTEGER,
+                    outros INTEGER,
+                    desconto INTEGER,
+                    total INTEGER NOT NULL,
+                    entrada INTEGER NOT NULL,
+                    tipo_entrada TEXT NOT NULL,
+                    valor_receber INTEGER NOT NULL,
+                    tipo_pagamento TEXT NOT NULL,
+                    vencimento INTEGER NOT NULL,
+                    cod_armacao TEXT,
+                    tipo_lente TEXT,
+                    examinador TEXT,
+                    anexo_receita BLOB,
+                    usuario TEXT NOT NULL,
+                    FOREIGN KEY (cpf) REFERENCES clientes (cpf)
+                );
+                """
             )
-        except AttributeError:
-            print("Faça a conexão")
+            print("Tabela OS criada com sucesso.")
+        except sqlite3.Error as e:
+            print(f"Erro ao criar a tabela OS: {e}")
+
+    def insert_os(self, **kwargs):
+        """Insere um novo OS no banco de dados."""
+
+        try:
+            cursor = self.connection.cursor()
+
+            query = """
+                INSERT INTO os (
+                    parcelas_os,
+                    os,
+                    cpf,
+                    nome_cliente,
+                    armacao_valor,
+                    lentes_valor,
+                    outros,
+                    desconto,
+                    total,
+                    entrada,
+                    tipo_entrada,
+                    valor_receber,
+                    tipo_pagamento,
+                    vencimento,
+                    cod_armacao,
+                    tipo_lente,
+                    examinador,
+                    anexo_receita,
+                    usuario
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """
+
+            cursor.execute(query, tuple(kwargs.values()))
+            self.connection.commit()
+            cursor.close()
+            print("Dados inseridos com sucesso.")
+        except sqlite3.Error as e:
+            print(f"Erro ao inserir dados na tabela OS: {e}")
 
 
 if __name__ == "__main__":

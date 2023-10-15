@@ -19,8 +19,6 @@ import pandas as pd
 import re
 import matplotlib.pyplot as plt
 
-import os
-
 
 class Login(QWidget, Ui_Login):
     def __init__(self) -> None:
@@ -73,7 +71,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if user.lower() == "usuário":
             self.btn_pg_cadastro.setVisible(False)
 
-        # --- TELAS DO SISTEMA
+        # --- TELAS DO SISTEMA ---
         # Tela principal
         self.btn_home.clicked.connect(lambda: self.Pages.setCurrentWidget(self.pg_home))
 
@@ -108,6 +106,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.Pages.setCurrentWidget(self.pg_importar)
         )
 
+        # --- BUTTONS DO SISTEMA ---
+
+        # --- CLIENTES
         # Btn cadastrar_usuario
         self.btn_cadastrar.clicked.connect(self.subscribe_user)
 
@@ -135,7 +136,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Atualzia tabelas
         self.reset_table()
 
-        # Btn's Gerar
+        # -- TABELAS
         # Btn saida
         self.btn_gerar.clicked.connect(self.gerar_saida)
         # Btn estorno
@@ -147,7 +148,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # ---- Anexo OS
         # Btn localizar arquivo anexo
-        self.btn_anexar_receita.clicked.connect(self.open_path_os)
+        self.btn_pesquisar_cliente_os.clicked.connect(self.search_customer_os)
+        self.btn_prosseguir_os.clicked.connect(self.subscribe_os)
+        self.btn_concluirOs.clicked.connect(lambda: self.concluir_os(username))
 
     # Função_cadastrar_usuario
     def subscribe_user(self):
@@ -802,7 +805,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         db.close_connection()
 
-    # Funcao Edita dados cliente 
+    # Funcao Edita dados cliente
     def edit_record(self):
         self.enable_customer_fields()
         self.btn_editar_cliente.setStyleSheet(
@@ -841,17 +844,189 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             "font-size: 21px;"
         )
 
-    def open_path_os(self):
+    # Funcao captura cliente receita
+    def search_customer_os(self):
+        cpf = self.txt_cpf_cliente_os.text()
+        msgBox = QMessageBox()
+        db = DataBase()
+        db.conecta()
+
+        if db.check_client_cpf(cpf) is False:
+            msgBox = QMessageBox()
+            msgBox.setText("Deseja cadastrar o Cliente?")
+            msgBox.setInformativeText(
+                "O CPF informado será cadastrado no sistema\nclique em 'Yes' para confirmar."
+            )
+            msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+            msgBox.setDefaultButton(QMessageBox.No)
+            msgBox.setDetailedText(f"O seguinte CPF será cadastrado: {cpf}")
+
+        else:
+            msgBox.setIcon(QMessageBox.Icon.Warning)
+            msgBox.setWindowTitle("Cliente já cadastrado")
+            msgBox.setText("Exibindo dados")
+            customer_info = db.get_customer_info(cpf)
+            self.txt_cliente_os.setText(customer_info["nome"])
+
+        ret = msgBox.exec()
+
+        if ret == QMessageBox.Yes:
+            self.Pages.setCurrentWidget(self.pg_cadastro_cliente)
+
+        db.close_connection()
+
+    # Funcao cadastra OS
+    def subscribe_os(self):
+        armacao = self.txt_armacao_rs.text()
+        lente = self.txt_lentes_rs.text()
+        outros = self.txt_outros_rs.text()
+        desconto = self.txt_descontos_rs.text()
+        entrada = self.txt_entrada_rs.text()
+
+        # Verificar se todas as entradas são números reais
+        if (
+            armacao.replace(".", "", 1).isdigit()
+            and lente.replace(".", "", 1).isdigit()
+            and outros.replace(".", "", 1).isdigit()
+            and desconto.replace(".", "", 1).isdigit()
+            and entrada.replace(".", "", 1).isdigit()
+        ):
+            # Converter as entradas para números reais e calcular o total
+            armacao_valor = float(armacao)
+            lente_valor = float(lente)
+            outros_valor = float(outros)
+            desconto_valor = float(desconto)
+            entrada_valor = float(entrada)
+            total = (
+                armacao_valor
+                + lente_valor
+                + outros_valor
+                - desconto_valor
+                - entrada_valor
+            )
+
+            self.txt_total_rs.setText("{:.2f}".format(total))
+            valor_restante = float(total)
+            # Gerar as parcelas de 1 a 10
+            parcelas_lista = []
+            for i in range(1, 11):
+                valor_parcela = round(valor_restante / i, 2)
+                parcela_texto = f"{i}x R$ {valor_parcela}"
+                parcelas_lista.append(parcela_texto)
+
+            # Limpar o combobox e adicionar as parcelas
+            self.cb_a_pagar_os.clear()
+            self.cb_a_pagar_os.addItems(parcelas_lista)
+
+        else:
+            print("Alguma entrada não é um número real.")
+
+    # Funcao conclui OS
+    def concluir_os(self, usuario):
+        cpf = self.txt_cpf_cliente_os.text()
+        nome_cliente = self.txt_cliente_os.text()
+        os_num = self.txt_os_num.text()
+        armacao = self.txt_armacao_rs.text()
+        lente = self.txt_lentes_rs.text()
+        outros = self.txt_outros_rs.text()
+        desconto = self.txt_descontos_rs.text()
+        tipo_entrada = self.cb_tipo.currentText()
+        entrada = self.txt_entrada_rs.text()
+        total = self.txt_total_rs.text()
+        valor_a_pagar = self.txt_total_rs.text()
+        tipo_pagamento = self.cb_pagamento.currentText()
+        parcelas_combo_text = self.cb_a_pagar_os.currentText()
+
+        vencimento = self.txt_vencimentodia.text()
+        parcelas_split = (
+            parcelas_combo_text.split()
+        )  # Separa a string nos espaços em branco
+        parcelas_int = int(
+            parcelas_split[0][:-1]
+        )  # Pega o primeiro elemento e remove o último caractere ('x')
+        valor_a_pagar = float(parcelas_split[2])
+        cod_armacao = self.txt_cod_armacao.text()
+        tipo_lente = self.txt_tipo_lente.text()
+        examinador = self.txt_examinador.text()
+
         file, _ = QFileDialog.getOpenFileName(
-            self,
-            "Open File",
-            "/home",
-            "Arquivos de Texto (*.*)" 
+            self, "Open File", "/home", "Arquivos de Texto (*.*)"
         )
         if file:
-            path = os.path.dirname(file)
-            self.ln_anexo_receita.setText(path)  
-        
+            self.ln_anexo_receita.setText(file)
+            with open(file, "rb") as f:
+                path = f.read()
+
+        msgBox = QMessageBox()
+        msgBox.setText("Confirma a OS?")
+        msgBox.setInformativeText(
+            "A OS será cadastrada no sistema\nclique em 'Yes' para confirmar."
+        )
+        msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msgBox.setDefaultButton(QMessageBox.No)
+        msgBox.setDetailedText(f"A seguinte OS será cadastrada: {os_num}")
+        ret = msgBox.exec()
+
+        if ret == QMessageBox.Yes:
+            db = DataBase()
+            for i in range(1, parcelas_int + 1):
+                # Gerar um número de identificação para a parcela
+                id_parcela = f"{os_num}{chr(ord('a') + i - 1 )}"
+
+                # Certifique-se de que a classe DataBase está corretamente implementada
+                db.conecta()
+                db.insert_os(
+                    parcelas_os=id_parcela,
+                    os=os_num,
+                    cpf=cpf,
+                    nome_cliente=nome_cliente,
+                    armacao_valor=armacao,
+                    lentes_valor=lente,
+                    outros=outros,
+                    desconto=desconto,
+                    total=total,
+                    entrada=entrada,
+                    tipo_entrada=tipo_entrada,
+                    valor_receber=valor_a_pagar,
+                    tipo_pagamento=tipo_pagamento,
+                    vencimento=vencimento,
+                    cod_armacao=cod_armacao,
+                    tipo_lente=tipo_lente,
+                    examinador=examinador,
+                    anexo_receita=path,
+                    usuario=usuario,
+                )
+            db.close_connection()
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Icon.Information)
+            msg.setWindowTitle("Cadastro OS")
+            msg.setText("Cadastro salvo!")
+            msg.exec()
+            # Limpar todos os campos de texto e redefinir as caixas de combinação
+            self.txt_os_num.setText("")
+            self.txt_cpf_cliente_os.setText("00000000000")
+            self.txt_cliente_os.setText("")
+            self.txt_armacao_rs.setText("")
+            self.txt_lentes_rs.setText("")
+            self.txt_outros_rs.setText("")
+            self.txt_descontos_rs.setText("")
+            self.txt_entrada_rs.setText("")
+            self.txt_vencimentodia.setText("")
+            self.txt_cod_armacao.setText("")
+            self.txt_tipo_lente.setText("")
+            self.txt_examinador.setText("")
+            self.txt_entrada_rs.setText("")
+            self.txt_total_rs.setText("")
+            self.cb_tipo.setCurrentIndex(0)
+            self.cb_pagamento.setCurrentIndex(0)
+            self.cb_a_pagar_os.clear()
+            self.ln_anexo_receita.setText("Selecione a pasta com o arquivo  -------->")
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Icon.Information)
+            msg.setWindowTitle("Cadastro OS")
+            msg.setText("Cadastro Cancelado!")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
